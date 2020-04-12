@@ -1,0 +1,154 @@
+\documentclass{article}[14pt]
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{fontawesome} % ICONS: http://ctan.math.illinois.edu/fonts/fontawesome/doc/fontawesome.pdf
+\usepackage{amssymb}
+
+
+\setlength\parindent{0pt}
+
+\newcommand{\skill}[1]{
+  \hfill
+  \foreach \n in {1,...,#1}{{\normalsize$\bullet$\hspace{1pt}}}
+}
+
+% color pallet
+\definecolor{C1}{HTML}{0B9F83}
+\definecolor{C2}{HTML}{42858B}
+\definecolor{C3}{HTML}{786C93}
+\definecolor{C4}{HTML}{AF529B}
+\definecolor{C5}{HTML}{E639A3}
+
+%%%%%
+% note that the opacity creates the two colors 
+% in the tcolorbox
+%%%%%
+
+
+% $1:= Title
+% $2:= Color
+\newenvironment{cvsection}[2] {
+  \begin{tcolorbox}[
+    standard jigsaw, % make background transparent
+    opacityback=0, % make background transparent
+    top=0mm, % size of top boarder
+    bottom=0mm, % size of bottom boarder
+    boxrule=0pt, % boarder of sort
+    enhanced, % enable frame code
+    frame code={
+      \path[draw=#2,line width=3pt]
+        (frame.south west) -- 
+        ([yshift=-0.29cm] frame.north west) -- 
+        ([yshift=-0.29cm, xshift=0.2\linewidth] frame.north west);
+    }
+  ]
+  \hspace{0.19\linewidth}
+  \textbf{\textit{\Large{#1}}}
+  \large\newline
+}
+{ \end{tcolorbox} }
+
+\newenvironment{tightemize}
+{\vspace{-3pt}\begin{itemize}[leftmargin=*]\itemsep1pt \parskip0pt \parsep0pt}
+{\end{itemize}}
+
+\newcommand{\HRule}[2]{\textcolor{#1}{\rule{\linewidth}{#2}}}
+\newcommand{\header}[1]{{\large\textbf{#1}}\newline}
+\newcommand{\locationdate}[2]{\textit{#1} \hfill \textit{#2}}
+\newcommand{\spacer}{\quad}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+{ \huge \bfseries Samuel Weitzman}\\[0.2cm]
+{\Large 
+{\large\faPhone}\ (774) 218 - 5184\spacer
+{\large\faEnvelope}\ sameweitzman@gmail.com\spacer
+{\large\faLinkedin}\ \href{linkedin.com/in/seweitzman}{in/seweitzman}\\
+{\large\faGithub}\ \href{githhub.com/my_github_page}{githhub.com/my\_github\_page}\spacer
+{\large\faHome}\ \href{mypersonalwebsite.com}{mypersonalwebsite.com}\\
+}
+\end{center}
+\begin{minipage}[t][0.7\textheight]{.27\textwidth}
+\vspace{1pt}
+\begin{cvsection}{languages}{C1}
+Ruby\skill{4}\\
+SQL\skill{2}\\
+Python\skill{2}\\
+Javascript\skill{2}\\
+\TeX\skill{2}\\
+MATLAB\skill{2}\\
+C/C++\skill{1}\\
+HTML\skill{1}\\
+CSS\skill{1}\\
+\end{cvsection}
+\vfill
+\begin{cvsection}{tools}{C2}
+vim\skill{4}\\
+git\skill{4}\\
+ruby on rails\skill{4}\\
+postgres\skill{3}\\
+react\skill{2}\\
+redux\skill{1}\\
+postman\skill{1}\\
+\end{cvsection}
+\vfill
+\begin{cvsection}{books}{C3}
+Clean Code\\
+\end{cvsection}
+\vfill
+\begin{cvsection}{interests}{C4}
+Data science\\
+Security\\
+Performance\\
+Statistics\\
+Code quality\\
+Technical debt\\
+Systems\\
+Architecture\\
+Sustainabilty\\
+Design\\
+\end{cvsection}
+\end{minipage}
+\hfill
+\begin{minipage}[t][0.7\textheight]{.7\textwidth}
+\vspace{1pt}
+\begin{cvsection}{education}{C2}
+\header{Brown Univeristy}
+\locationdate{Providence, RI}{Sep. 2014 - May 2018}\\
+\locationdate{B.Sc. Mathematics - Computer Science}{}\\
+\locationdate{GPA: 4.00}{}\\
+Diverse undergrad education specializing in the topics at the intersection of math, applied math, and computer science:  machine learning, data science, and security.
+\end{cvsection}
+\vfill
+\begin{cvsection}{about me}{C1}
+Originally from Massachusetts, I currently live in San Francisco. I value sustainability, staying active, and being outside as much as I can. I love building things, problem solving, intentional design, and learning new things. I enjoy helping people, both through my work and the people immediately around me.
+\end{cvsection}
+\vfill
+\begin{cvsection}{work and experience}{C3}
+\header{Cisco Meraki}
+\locationdate{San Francisco, CA}{Sep. 2018 - Present}\\
+\locationdate{Full Stack Software Engineer}{}
+\begin{tightemize}
+    \item Tech: Ruby on Rails, Git, Postgres, React, Redux
+    \item Focused on feature building, bug triaging, code quality, scalability. 
+    \item One of 3 people for a Switch dashboard supporting over 600,000 customer networks and millions of pageviews per week.
+\end{tightemize}
+
+\header{Center for Computation and Visualization}
+\locationdate{Providence, RI}{2017 - 2018}\\
+\locationdate{Research Assistant}{}\\
+
+\header{Other}
+\locationdate{DevOps Engineering Intern}{GE}\\
+\locationdate{Computer Vision Engineering Intern}{PerkinElmer}\\
+\locationdate{CS Teaching Assistant}{Brown University}\\
+\locationdate{CS Peer Tutor}{Brown University}\\
+\end{cvsection}
+\vfill 
+\end{minipage}
+\end{document}
