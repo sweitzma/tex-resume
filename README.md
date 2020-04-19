@@ -1,12 +1,8 @@
 # Latex Resume
-This repo contains the TeX source code and Docker tooling to consistantly build my resume.
+This repo contains the TeX source code and docker references to build it consistantlyl
 
 ## How to make resume
-First we need the docker image `tex`. We can build this by running
-```
-$ make image
-```
-which will call `docker build ...` and not much else. Now we can compile the TeX source into a pdf with `pdflatex` which is installed on the `tex` image. By running
+We will use a personal docker image with a TeX environment for this project. We can compile the TeX source into a pdf with `pdflatex` which is installed on the `tex` image. By running
 ```
 $ make
 ```
@@ -17,5 +13,4 @@ We should see the resulting PDF copied and named in the root directory of this r
 ## System requirements
 * `docker`
 * `make`
-
 

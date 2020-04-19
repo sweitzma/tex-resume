@@ -9,9 +9,6 @@ else
 endif
 
 all:
-	docker run --rm -v $$(pwd)/src/:/mnt/ tex resume.tex
+	docker run --rm -v $$(pwd)/src/:/mnt/ sweitzma/tex:base resume.tex
 	cp src/resume.pdf sam-weitzman-resume.pdf
 	eval $(OPEN)
-
-image:
-	docker build -f Dockerfile -t tex .
