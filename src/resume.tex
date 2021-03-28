@@ -3,7 +3,7 @@
 \usepackage{tikz,lipsum,lmodern}
 \usepackage[most]{tcolorbox}
 \usepackage{enumitem}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[margin=2cm]{geometry}
 \usepackage{fontawesome} % ICONS: http://ctan.math.illinois.edu/fonts/fontawesome/doc/fontawesome.pdf
 \usepackage{amssymb}
 \usepackage[hidelinks]{hyperref}
@@ -25,6 +25,7 @@
 \definecolor{C2}{HTML}{42858B}
 \definecolor{C3}{HTML}{786C93}
 \definecolor{C4}{HTML}{AF529B}
+\definecolor{C4.5}{HTML}{CB469F}
 \definecolor{C5}{HTML}{E639A3}
 
 %%%%%
@@ -87,54 +88,72 @@
 
 \vspace{1pt}
 \begin{cvsection}{work - \href{https://meraki.cisco.com/}{cisco meraki}}{C1}
-  \header{ Software Engineer / Data Engineer}
+  \header{ Machine Learning Engineer }
   \locationdate{San Francisco, CA}{Sep. 2018 - Present}
   \begin{tightemize}
-    \item Developed a production anomaly detection system for web application perfromance problems. It is currently
-    running for tens of thousands of customers.
-    \item Used Python, Pandas, Jax, NumPyro, Docker, AWS, Terraform, and MLFlow.
-    \item Actively involved in model development and optimization, developer workflows and tools, and productionizing.
-    \item Improved backend scalability by setting up load balancers and optimizing API calls.
-    \item Active mentor and interviewer.
+    \item Developed a production anomaly detection system for web application perfromance issues
+    \item Improved user alert response by 18\%
+    \item Used Python, Pandas, Jax, NumPyro, Docker, AWS, Terraform, and MLFlow
+    % \item Actively involved in model development and optimization, developer workflows and tools, and productionizing.
+    \item Run a machine learning presentation meetup to foster collaboration and knowledge sharing across teams 
+    \item Mentor to full time hires and adviser for intern research projects
+    \item Lead data analytics and project planning for multiple data driven features in the works
+    \item Worked on Meraki web app features and scalability, writing Ruby on Rails / Scala backend
+      and JavaScript + React frontend
+    \item Close collaboration with PM and UX to scope new ML features and product decisions
+    % smart thresholds, load balancers, code profiling alerts, mlflow
+    % ml template, jupyter lab stuff, sdwan project, capacity planning
   \end{tightemize}
 \end{cvsection}
 \vfill
 \begin{cvsection}{education - \href{https://www.brown.edu/}{brown university}}{C2}
   \header{B.Sc. Mathematics - Computer Science}
   \locationdate{GPA: 4.00}{Sep. 2014 - May 2018}\\
-  Diverse undergrad education specializing in topics at the intersection of theoretical math, applied math, and computer
+  Diverse undergrad education specializing in topics at the intersection of pure math, applied math, and computer
   science.
   Capstone in computer vision.\\
 \end{cvsection}
 \vfill
 \begin{cvsection}{about me}{C3}
-  Originally from MA, I currently live in San Francisco.
-  I want my work to answer novel questions through data science, all while leveraging the best practices of testing, automation, and visibility of traditional software engineering.
-  I appreciate picking up work outside my expertice and enjoy the opportunity to grow my skillset.
-  Outside of tech my interests include sustainable agriculture, trail running, and fermented foods.\\
+  I want my work to solve novel problems through data analytics and modeling, all while leveraging the best practices of testing, automation, and visibility of traditional software engineering.
+  Interested in working both on data heavy problems and the tools to do so more effectively.
+  Outside of tech my interests include sustainable agriculture, trail running, and cooking with
+  friends.\\
 \end{cvsection}
 \vfill
-\begin{minipage}[t]{.27\textwidth}
+\begin{minipage}[t]{.25\textwidth}
   \begin{cvsection}{languages}{C4}
-Python\skill{4}
-Ruby\skill{4}
-SQL\skill{2}
-Bash\skill{2}
-\TeX\skill{2}
-Scala\skill{1}
-\end{cvsection}
-\vfill
+    Python\skill{4}
+    Ruby\skill{4}
+    SQL\skill{2}
+    Bash\skill{2}
+    \TeX\skill{2}
+    Julia\skill{1}
+  \end{cvsection}
+  \vfill
 \end{minipage}
 \hspace{2cm}
-\begin{minipage}[t]{.27\textwidth}
-\begin{cvsection}{tools}{C5}
-Git\skill{4}
-Docker\skill{3}
-Postgres\skill{2}
-AWS\skill{2}
-ElasticSearch\skill{1}
-Terraform\skill{1}
-\end{cvsection}
-\vfill
+\begin{minipage}[t]{.25\textwidth}
+  \begin{cvsection}{libraries}{C4.5}
+    Pandas\skill{4}
+    Matplotlib\skill{3}
+    Dask\skill{3}
+    Numpyro\skill{3}
+    Numpy\skill{2}
+    Sklearn\skill{2}
+  \end{cvsection}
+  \vfill
+\end{minipage}
+\hspace{2cm}
+\begin{minipage}[t]{.25\textwidth}
+  \begin{cvsection}{tools}{C5}
+    Git\skill{4}
+    Docker\skill{3}
+    MLFlow\skill{3}
+    AWS\skill{2}
+    Postgres\skill{2}
+    Terraform\skill{1}
+  \end{cvsection}
+  \vfill
 \end{minipage}
 \end{document}
