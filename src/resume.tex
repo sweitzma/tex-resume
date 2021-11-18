@@ -59,7 +59,7 @@
 { \end{tcolorbox} }
 
 \newenvironment{tightemize}
-{\vspace{-2pt}\begin{itemize}[leftmargin=*]\itemsep1pt \parskip0pt \parsep0pt}
+{\vspace{-2pt}\begin{itemize}[leftmargin=*]\itemsep4pt \parskip0pt \parsep0pt}
 {\end{itemize}}
 
 \newcommand{\HRule}[2]{\textcolor{#1}{\rule{\linewidth}{#2}}}
@@ -72,17 +72,17 @@
 \begin{center}
   { \huge \texttt{samuel weitzman}}\\[0.2cm]
 \foreach \x in {C5, C4, C3, C2, C1} {%
-  {\color{\x}\rule{.1\textwidth}{0.6pt}}%
-}\\
-{\Large
+  {\color{\x}\rule{.11\textwidth}{0.8pt}}%
+}\\[5pt]
+{\large
   {\textcolor{black!75}{\large\faPhone}}\ \texttt{774.218.5184}\spacer
-  {\textcolor{black!75}{\large\faEnvelope}}\ \texttt{sameweitzman@gmail.com}\spacer\\
-  {\textcolor{black!75}{\large\faLinkedin}}\ \href{linkedin.com/in/seweitzman}{\texttt{linkedin.com/in/seweitzman}}\spacer
-  {\textcolor{black!75}{\large\faGithub}}\ \href{githhub.com/my_github_page}{\texttt{github.com/sweitzma}}\\
-  % {\large\faHome}\5\href{mypersonalwebsite.com}{mypersonalwebsite.com}\\
+  {\textcolor{black!75}{\large\faEnvelope}}\ \texttt{sameweitzman@gmail.com}\spacer\\[5pt]
+  {\textcolor{black!75}{\large\faHome}}\ \href{http://almostsam.com}{\texttt{almostsam.com}}\spacer
+  {\textcolor{black!75}{\large\faLinkedin}}\ \href{http://linkedin.com/in/seweitzman}{\texttt{linkedin.com/in/seweitzman}}\spacer
+  {\textcolor{black!75}{\large\faGithub}}\ \href{http://github.com/sweitzma}{\texttt{github.com/sweitzma}}\\
 }
 \foreach \x in {C5, C4, C3, C2, C1} {%
-  {\color{\x}\rule{.17\textwidth}{0.6pt}}%
+  {\color{\x}\rule{.18\textwidth}{0.6pt}}%
 }
 \end{center}
 
@@ -91,16 +91,35 @@
   \header{ Machine Learning Engineer }
   \locationdate{San Francisco, CA}{Sep. 2018 - Present}
   \begin{tightemize}
-    \item Developed a production anomaly detection system for web application perfromance issues
-    \item Improved user alert response by 18\%
-    \item Used Python, Pandas, Jax, NumPyro, Docker, AWS, Terraform, and MLFlow
+    \item Led, built, and deployed network usage forecasting feature
+    \item Developed multiple anomaly detection models to uncover networking problems
+    \item Run rapid data processing, exploration, and experimentation for new features
+    \item Experience with developing and deploying simple and highly complex models
+    \item Collaborate closely with PM to define product decisions and roadmap
+    \item Enjoy being domain driven and using that to assist modeling or simplify solution
+    \item Comfortable working on all parts of the stack: modeling, data pipelines, infrastructure,
+      backend, and frontend
+
+%     \item Run experimental data collection and 
+%     \item Implemented custom change-point detection model from academic literature
+%     \item 
+%     \item Conduct rapid experiments on how to detect network failures
+%     \item Experience with complex baysian 
+
+%     \item Developed multiple anoamly detection features on networking timeseries data (one in production right now)
+%     \item Lead data analytics and project planning for multiple data driven features in the works
+%     \item Collaborate with ML Infra team to define and encourage best practice ML workflows
+%     \item Run a machine learning presentation meetup to foster collaboration and knowledge sharing across teams 
+%     \item Use Python, Pandas, Numpy, NumPyro, Docker, AWS (various), MLFlow, Kubeflow
+
+    % \item Developed a production anomaly detection system for web application perfromance issues
+    % \item Improved user alert response by 18\%
+    % \item Used Python, Pandas, Jax, NumPyro, Docker, AWS, Terraform, and MLFlow
     % \item Actively involved in model development and optimization, developer workflows and tools, and productionizing.
-    \item Run a machine learning presentation meetup to foster collaboration and knowledge sharing across teams 
-    \item Mentor to full time hires and adviser for intern research projects
-    \item Lead data analytics and project planning for multiple data driven features in the works
-    \item Worked on Meraki web app features and scalability, writing Ruby on Rails / Scala backend
-      and JavaScript + React frontend
-    \item Close collaboration with PM and UX to scope new ML features and product decisions
+    % \item Mentor to full time hires and adviser for intern research projects
+    % \item Worked on Meraki web app features and scalability, writing Ruby on Rails / Scala backend
+      % and JavaScript + React frontend
+    % \item Close collaboration with PM and UX to scope new ML features and product decisions
     % smart thresholds, load balancers, code profiling alerts, mlflow
     % ml template, jupyter lab stuff, sdwan project, capacity planning
   \end{tightemize}
@@ -125,7 +144,7 @@
   \begin{cvsection}{languages}{C4}
     Python\skill{4}
     Ruby\skill{4}
-    SQL\skill{2}
+    SQL\skill{3}
     Bash\skill{2}
     \TeX\skill{2}
     Julia\skill{1}
@@ -136,11 +155,11 @@
 \begin{minipage}[t]{.25\textwidth}
   \begin{cvsection}{libraries}{C4.5}
     Pandas\skill{4}
+    Numpy\skill{3}
+    Sklearn\skill{3}
     Matplotlib\skill{3}
-    Dask\skill{3}
-    Numpyro\skill{3}
-    Numpy\skill{2}
-    Sklearn\skill{2}
+    Dask\skill{2}
+    Numpyro\skill{2}
   \end{cvsection}
   \vfill
 \end{minipage}
@@ -149,9 +168,9 @@
   \begin{cvsection}{tools}{C5}
     Git\skill{4}
     Docker\skill{3}
-    MLFlow\skill{3}
-    AWS\skill{2}
+    AWS\skill{3}
     Postgres\skill{2}
+    Kubeflow\skill{1}
     Terraform\skill{1}
   \end{cvsection}
   \vfill
