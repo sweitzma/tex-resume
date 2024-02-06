@@ -3,7 +3,7 @@
 \usepackage{tikz,lipsum,lmodern}
 \usepackage[most]{tcolorbox}
 \usepackage{enumitem}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1.8cm]{geometry}
 \usepackage{fontawesome} % ICONS: http://ctan.math.illinois.edu/fonts/fontawesome/doc/fontawesome.pdf
 \usepackage{amssymb}
 \usepackage[hidelinks]{hyperref}
@@ -63,7 +63,9 @@
 {\end{itemize}}
 
 \newcommand{\HRule}[2]{\textcolor{#1}{\rule{\linewidth}{#2}}}
-\newcommand{\header}[1]{{\large\textbf{#1}}\newline}
+\newcommand{\header}[1]{\large\textbf{#1}}
+\newcommand{\role}[2]{{\large\textbf{#1}\hfill\textit{#2}}}
+\newcommand{\pastrole}[2]{{Previously #1\hfill\textit{#2}}}
 \newcommand{\locationdate}[2]{\textit{#1} \hfill \textit{#2}}
 \newcommand{\spacer}{\quad}
 
@@ -88,18 +90,20 @@
 
 \vspace{1pt}
 \begin{cvsection}{work - \href{https://aquabyte.ai/}{aquabyte}}{C1}
-  \header{ Senior Machine Learning Engineer }
-  \locationdate{San Francisco, CA}{Feb. 2022 - Present}
+  \role{Lead Machine Learning Engineer}{Jan. 2024 - Present}\\
+  \pastrole{Senior Machine Learning Engineer}{Feb. 2022 - Jan. 2024}
   \begin{tightemize}
-    \item Researched computer vision models for classification, keypoint detection, and
+    \item Trained computer vision models for classification, keypoint detection, and
       3D geometry to weigh salmon from a stereo camera system.
     \item Deployed multiple models to both AWS cloud environments and edge devices.
     \item Models are active in production running inference on millions of images a day.
-    % \item Led load testing and setting up networking in AWS to deploy models.
-    % \item Occasional modeling work on more tabular data with non-deep learning techniques (RANCAC regression, xgboost, decision trees.)
-    % \item Wrote a data quality model which significantly reduced cost and wasted bandwidth.
-    % \item Created a model training template used across multiple teams to accelerate projects and encourage best practices.
     \item Comfortable working on all parts of the stack: modeling, data pipelines, infrastructure, backend, and frontend.
+
+% Other options
+% \item Led load testing and setting up networking in AWS to deploy models.
+% \item Occasional modeling work on more tabular data with non-deep learning techniques (RANCAC regression, xgboost, decision trees.)
+% \item Wrote a data quality model which significantly reduced cost and wasted bandwidth.
+% \item Created a model training template used across multiple teams to accelerate projects and encourage best practices.
 
 % key things to highlight
 % - deep learning and computer vision
@@ -112,8 +116,7 @@
   \end{tightemize}
 \end{cvsection}
 \begin{cvsection}{work - \href{https://meraki.cisco.com/}{cisco meraki}}{C1}
-  \header{ Machine Learning Engineer }
-  \locationdate{San Francisco, CA}{Sep. 2018 - Jan. 2022}
+  \role{ Machine Learning Engineer }{Sep. 2018 - Jan. 2022}
   \begin{tightemize}
     % \item Led, built, and deployed network usage forecasting feature
     % \item Developed multiple anomaly detection models to uncover networking problems
@@ -144,26 +147,32 @@
     % smart thresholds, load balancers, code profiling alerts, mlflow
   \end{tightemize}
 \end{cvsection}
+
 \vfill
+
 \begin{cvsection}{education - \href{https://www.brown.edu/}{brown university}}{C2}
-  \header{B.Sc. Mathematics - Computer Science}
-  \locationdate{GPA: 4.00}{Sep. 2014 - May 2018}\\
+  \role{B.Sc. Mathematics - Computer Science}{Sep. 2014 - May 2018}\\
+  \locationdate{GPA: 4.00}{}\\
   % Diverse undergrad education specializing in topics at the intersection of pure math, applied math, and computer
   % science.
   % Capstone in computer vision.\\
 \end{cvsection}
+
 \vfill
+
 \begin{cvsection}{about me}{C3}
 I want my work to solve critical climate and environmental problems.
 I thrive with a challenging technical problem and owning a project from research to deployment. 
   Outside of tech my interests include sustainable agriculture, trail running, and cooking with friends.\\
 \end{cvsection}
+
 \vfill
+
 \begin{minipage}[t]{.25\textwidth}
   \begin{cvsection}{languages}{C4}
     Python\skill{4}
-    Ruby\skill{4}
     SQL\skill{3}
+    Terraform\skill{2}
     Bash\skill{2}
     Javascript\skill{2}
     \TeX\skill{2}
@@ -173,12 +182,12 @@ I thrive with a challenging technical problem and owning a project from research
 \hspace{2cm}
 \begin{minipage}[t]{.25\textwidth}
   \begin{cvsection}{libraries}{C4.5}
-    pandas\skill{4}
-    pytorch\skill{3}
+    Pandas\skill{4}
+    Pytorch\skill{4}
+    NumPy\skill{4}
     sklearn\skill{3}
-    pytest\skill{3}
-    OpenCV\skill{2}
-    dask\skill{2}
+    Open CV\skill{3}
+    MLFlow\skill{2}
   \end{cvsection}
   \vfill
 \end{minipage}
@@ -187,10 +196,10 @@ I thrive with a challenging technical problem and owning a project from research
   \begin{cvsection}{tools}{C5}
     Docker\skill{4}
     Git\skill{4}
-    AWS\skill{3}
-    Databases\skill{2}
-    MLFlow\skill{2}
-    Terraform\skill{1}
+    AWS\skill{4}
+    Postgres\skill{2}
+    NVIDIA Jetson\skill{2}
+    \vspace{4pt}\newline
   \end{cvsection}
   \vfill
 \end{minipage}
