@@ -1,2 +1,5 @@
 src/*
 !src/*.tex
+
+*-cover-letter.pdf
+cover-letter.tex
