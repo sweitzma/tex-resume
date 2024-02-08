@@ -1,0 +1,93 @@
+\documentclass{article}[14pt]
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{enumitem}
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{fontawesome} % ICONS: http://ctan.math.illinois.edu/fonts/fontawesome/doc/fontawesome.pdf
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+
+
+\NewDocumentCommand{\colorrule}{O{.4pt}m}{%
+}
+
+% color pallet
+\definecolor{C1}{HTML}{0B9F83}
+\definecolor{C2}{HTML}{42858B}
+\definecolor{C3}{HTML}{786C93}
+\definecolor{C4}{HTML}{AF529B}
+\definecolor{C4.5}{HTML}{CB469F}
+\definecolor{C5}{HTML}{E639A3}
+
+%%%%%
+% note that the opacity creates the two colors
+% in the tcolorbox
+%%%%%
+
+% $1:= Title
+% $2:= Color
+\newenvironment{cvsection}[2] {
+  \begin{tcolorbox}[
+    standard jigsaw, % make background transparent
+    opacityback=0,   % make background transparent
+    top=0mm,         % size of top boarder
+    bottom=0mm,      % size of bottom boarder
+    boxrule=0pt,     % boarder of sort
+    enhanced,        % enable frame code
+    frame code={
+      \path[draw=#2,line width=3pt]
+        (frame.south west) --
+        ([yshift=-0.29cm] frame.north west) --
+        ([yshift=-0.29cm, xshift=0.2\linewidth] frame.north west);
+    }
+  ]
+  \hspace{0.20\linewidth}
+  \textbf{\texttt{\Large{#1}}}
+  \normalsize
+  \vspace{5pt}
+  \newline
+}
+{ \end{tcolorbox} }
+
+\newcommand{\spacer}{\quad}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+  { \huge \texttt{samuel weitzman}}\\[0.2cm]
+\foreach \x in {C5, C4, C3, C2, C1} {%
+  {\color{\x}\rule{.11\textwidth}{0.8pt}}%
+}\\[5pt]
+{\large
+  {\textcolor{black!75}{\large\faPhone}}\ \texttt{774.218.5184}\spacer
+  {\textcolor{black!75}{\large\faEnvelope}}\ \texttt{sameweitzman@gmail.com}\spacer\\[5pt]
+  {\textcolor{black!75}{\large\faHome}}\ \href{http://almostsam.com}{\texttt{almostsam.com}}\spacer
+  {\textcolor{black!75}{\large\faLinkedin}}\ \href{http://linkedin.com/in/seweitzman}{\texttt{linkedin.com/in/seweitzman}}\spacer
+  {\textcolor{black!75}{\large\faGithub}}\ \href{http://github.com/sweitzma}{\texttt{github.com/sweitzma}}\\
+}
+\foreach \x in {C5, C4, C3, C2, C1} {%
+  {\color{\x}\rule{.18\textwidth}{0.6pt}}%
+}
+\end{center}
+
+\vspace{1pt}
+\begin{cvsection}{Company - The Job Role}{C1}
+\parsep3pt
+\parskip8pt
+\newline
+Dear Hiring Manager,
+
+I promise I'm qualified.
+
+Here is a list of fruits.
+\begin{itemize}[topsep=0pt]
+    \parskip1pt
+    \item apple
+    \item banana
+    \item kiwi
+  \end{itemize}
+
+Let's hope that does it.
+\end{cvsection}
+\end{document}

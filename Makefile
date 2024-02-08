@@ -23,3 +23,8 @@ cover: ## generate a PDF from the TeX source
 	cp src/cover-letter.pdf sam-weitzman-cover-letter.pdf
 	eval $(OPEN)
 
+clean:
+	@rm src/*.aux
+	@rm src/*.log
+	@rm src/*.pdf
+	@rm src/*.out
